@@ -18,7 +18,9 @@
         gsItemY: '=',
         gsItemWidth: '=',
         gsItemHeight: '=',
-        gsItemAutopos: '='
+        gsItemAutopos: '=',
+        gsItemNoMove: '=',
+        gsItemNoResize: '='
       },
       link: function (scope, element, attrs, controller) {
 
@@ -27,6 +29,8 @@
         $(element).attr('data-gs-width', scope.gsItemWidth);
         $(element).attr('data-gs-height', scope.gsItemHeight);
         $(element).attr('data-gs-auto-position', scope.gsItemAutopos);
+        $(element).attr('data-gs-no-move', scope.gsItemNoMove);
+        $(element).attr('data-gs-no-resize', scope.gsItemNoResize);
         var widget = controller.addItem(element);
         var item = element.data('_gridstack_node');
         $timeout(function() {
